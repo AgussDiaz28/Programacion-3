@@ -15,7 +15,7 @@ public class Entregable {
 		Integer n7 = 7;
 		Integer n8 = 8;
 		Integer n9 = 91;
-		Integer n0 = 14;
+		Integer n0 = 34;
 		
 		listaUno.insert(n1);
 		listaUno.insert(n2);
@@ -32,11 +32,11 @@ public class Entregable {
 		Integer nd2 = 1;
 		Integer nd3 = 10;
 		Integer nd4 = 2;
-		Integer nd5 = 4;
+		Integer nd5 = 43;
 		Integer nd6 = 91;
 		Integer nd7 = 61;
-		Integer nd8 = 76;
-		Integer nd9 = 14;
+		Integer nd8 = 34;
+		Integer nd9 = 3;
 		Integer nd0 = 19;
 		
 		listaDos.insert(nd1);
