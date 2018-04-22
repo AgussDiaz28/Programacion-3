@@ -20,8 +20,17 @@ public class ListaSimple {
 	
 	//* Funcion que recorre la lista e inserta el valor en la posicion correcta *//
 	public void insertOrdenado(Integer info) {
-		Nodo Copia = this.first;
+		
 		Nodo NuevoNodo = new Nodo(info,null);
+		Nodo Copia = this.first;
+		
+		if (this.first == null) this.first = NuevoNodo;
+		
+		if (this.first.getInfo() < info) {
+			NuevoNodo.setNext(this.first);
+			this.first = NuevoNodo;
+			Copia = null;
+		}
 		
 		if (Copia != null) {
 			
@@ -35,9 +44,8 @@ public class ListaSimple {
 			
 			if (Copia != null) Copia.setNext(NuevoNodo);
 			
-		}else {
-			this.first = NuevoNodo;
 		}
+		
 		this.size = this.size +1;
 	}
 	

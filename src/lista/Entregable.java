@@ -6,16 +6,16 @@ public class Entregable {
 		ListaSimple listaUno = new ListaSimple();
 		ListaSimple listaDos = new ListaSimple();
 		
+		Integer n0 = 34;
 		Integer n1 = 9;
 		Integer n2 = 10;
 		Integer n3 = 2;
 		Integer n4 = 43;
 		Integer n5 = 51;
 		Integer n6 = 1;
-		Integer n7 = 7;
+		Integer n7 = 102;
 		Integer n8 = 8;
 		Integer n9 = 91;
-		Integer n0 = 34;
 		
 		listaUno.insert(n1);
 		listaUno.insert(n2);
@@ -27,7 +27,8 @@ public class Entregable {
 		listaUno.insert(n8);
 		listaUno.insert(n9);
 		listaUno.insert(n0);
-
+		
+		Integer nd0 = 102;
 		Integer nd1 = 9;
 		Integer nd2 = 1;
 		Integer nd3 = 10;
@@ -37,7 +38,6 @@ public class Entregable {
 		Integer nd7 = 61;
 		Integer nd8 = 34;
 		Integer nd9 = 3;
-		Integer nd0 = 19;
 		
 		listaDos.insert(nd1);
 		listaDos.insert(nd2);
