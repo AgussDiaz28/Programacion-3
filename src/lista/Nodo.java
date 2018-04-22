@@ -19,10 +19,6 @@ public class Nodo {
 		this.info = i;
 	}
 	
-	public Object setinfo(){
-		return this.info;
-	}
-	
 	public Nodo getNext(){
 		return this.next;
 	}

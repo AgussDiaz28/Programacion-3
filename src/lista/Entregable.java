@@ -6,16 +6,16 @@ public class Entregable {
 		ListaSimple listaUno = new ListaSimple();
 		ListaSimple listaDos = new ListaSimple();
 		
-		Nodo n1 = new Nodo(9,null);
-		Nodo n2 = new Nodo(10,null);
-		Nodo n3 = new Nodo(32,null);
-		Nodo n4 = new Nodo(43,null);
-		Nodo n5 = new Nodo(51,null);
-		Nodo n6 = new Nodo(63,null);
-		Nodo n7 = new Nodo(7,null);
-		Nodo n8 = new Nodo(8,null);
-		Nodo n9 = new Nodo(91,null);
-		Nodo n0 = new Nodo(14,null);
+		Integer n1 = 9;
+		Integer n2 = 10;
+		Integer n3 = 2;
+		Integer n4 = 43;
+		Integer n5 = 51;
+		Integer n6 = 1;
+		Integer n7 = 7;
+		Integer n8 = 8;
+		Integer n9 = 91;
+		Integer n0 = 14;
 		
 		listaUno.insert(n1);
 		listaUno.insert(n2);
@@ -28,16 +28,16 @@ public class Entregable {
 		listaUno.insert(n9);
 		listaUno.insert(n0);
 
-		Nodo nd1 = new Nodo(9,null);
-		Nodo nd2 = new Nodo(1,null);
-		Nodo nd3 = new Nodo(2,null);
-		Nodo nd4 = new Nodo(3,null);
-		Nodo nd5 = new Nodo(4,null);
-		Nodo nd6 = new Nodo(54,null);
-		Nodo nd7 = new Nodo(61,null);
-		Nodo nd8 = new Nodo(76,null);
-		Nodo nd9 = new Nodo(14,null);
-		Nodo nd0 = new Nodo(19,null);
+		Integer nd1 = 9;
+		Integer nd2 = 1;
+		Integer nd3 = 10;
+		Integer nd4 = 2;
+		Integer nd5 = 4;
+		Integer nd6 = 91;
+		Integer nd7 = 61;
+		Integer nd8 = 76;
+		Integer nd9 = 14;
+		Integer nd0 = 19;
 		
 		listaDos.insert(nd1);
 		listaDos.insert(nd2);
@@ -67,12 +67,12 @@ public class Entregable {
 	private static ListaSimple ordernarListas(ListaSimple listaUno, ListaSimple listaDos) {
 		ListaSimple resultado = new ListaSimple();
 		int size = listaUno.size;
-		Nodo Aux = listaUno.getFirst();
 		for (int i=0;i< size; i++) {
-			if (listaDos.contains(Aux.getInfo()) ) {
-				resultado.insertOrdenado(Aux.getInfo());
+			Integer Aux = listaUno.getValue(i);
+			if (Aux == null) return null; //Si no se encontro el valor en la posicion devuelvo null
+			if (listaDos.contains(Aux) ) {
+				resultado.insertOrdenado(Aux);
 			}
-			Aux = Aux.getNext();
 		}
 		return resultado;		
 	}
