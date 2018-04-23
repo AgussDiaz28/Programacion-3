@@ -9,13 +9,12 @@ public class Arbol {
 	NodoArbol first;
 	
 	public Arbol(){
-		this.first = null;	
+		this.first = null;
 	}
 	
-	public Arbol(Integer i, NodoArbol nodoDerecho, NodoArbol nodoIzquierdo ){
-		this.first.setinfo(i);
-		this.first.setDer(nodoDerecho);
-		this.first.setIzq(nodoIzquierdo);
+	public Arbol(Integer i){
+		NodoArbol N = new NodoArbol(i,null,null); 
+		this.first = N;
 	}
 	
 	public NodoArbol getRoot() {
@@ -116,34 +115,45 @@ public class Arbol {
 	}
 	
 	public void printPosOrder() {
-		
+		printPosOrder(this.getRoot());
+	}
+	
+	private void printPosOrder(NodoArbol A) {
+		System.out.println(A.getInfo());
+		if (A.getDer() != null) {
+			printPosOrder(A.getDer());
+		}
+		if (A.getIzq() != null) {
+			printPosOrder(A.getIzq());
+		}
 	}
 	
 	public void printPreOrder() {
-		
+		printPreOrder(this.getRoot());	
 	}
 	
+	private void printPreOrder(NodoArbol A) {
+		if (A.getDer() != null) {
+			printPosOrder(A.getDer());
+		}
+		System.out.println(A.getInfo());
+		if (A.getIzq() != null) {
+			printPosOrder(A.getIzq());
+		}
+	}
+
 	public void printInOrder() {
-		
+		printInOrder(this.getRoot());	
 	}
 	
-	public ArrayList getLongestBranch() {
-		return null;
-		
+	private void printInOrder(NodoArbol A) {
+		if (A.getDer() != null) {
+			printPosOrder(A.getDer());
+		}
+		if (A.getIzq() != null) {
+			printPosOrder(A.getIzq());
+		}
+		System.out.println(A.getInfo());
 	}
 	
-	public ArrayList getFrontera() { //hojas
-		return null;
-		
-	}
-	
-	public Object getMaxElem() {
-		return null;
-		
-	}
-	
-	public ArrayList getElemAtLevel(int i) {
-		return null;
-		
-	}
 }
