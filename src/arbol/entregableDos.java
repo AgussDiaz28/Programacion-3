@@ -32,6 +32,10 @@ public final class entregableDos {
 		System.out.println(result);
 		
 		Arbolito.printPosOrder();
+		System.out.println("--------");
+		Arbolito.printInOrder();
+		System.out.println("--------");
+		Arbolito.printPreOrder();
 
 	}
 }

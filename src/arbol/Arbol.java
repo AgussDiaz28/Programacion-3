@@ -1,9 +1,5 @@
 package arbol;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
 public class Arbol {
 	
 	NodoArbol first;
@@ -119,12 +115,10 @@ public class Arbol {
 	}
 	
 	private void printPosOrder(NodoArbol A) {
-		System.out.println(A.getInfo());
-		if (A.getDer() != null) {
+		if (A != null) {
 			printPosOrder(A.getDer());
-		}
-		if (A.getIzq() != null) {
 			printPosOrder(A.getIzq());
+			System.out.println(A.getInfo());
 		}
 	}
 	
@@ -133,11 +127,9 @@ public class Arbol {
 	}
 	
 	private void printPreOrder(NodoArbol A) {
-		if (A.getDer() != null) {
+		if (A != null) {
+			System.out.println(A.getInfo());
 			printPosOrder(A.getDer());
-		}
-		System.out.println(A.getInfo());
-		if (A.getIzq() != null) {
 			printPosOrder(A.getIzq());
 		}
 	}
@@ -147,13 +139,12 @@ public class Arbol {
 	}
 	
 	private void printInOrder(NodoArbol A) {
-		if (A.getDer() != null) {
+		if (A != null) {
 			printPosOrder(A.getDer());
-		}
-		if (A.getIzq() != null) {
+			System.out.println(A.getInfo());
 			printPosOrder(A.getIzq());
 		}
-		System.out.println(A.getInfo());
+		
 	}
 	
 }
