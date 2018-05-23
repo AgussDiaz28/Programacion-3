@@ -3,7 +3,7 @@ package grafo;
 import java.util.LinkedList;
 
 public abstract interface Grafo {
-	public abstract void addArista(int v1, int v2);
+	public abstract void addArista(int v1, int v2, int p);
 	public abstract LinkedList<Integer> getVertices();
 	public abstract int numVertices();
 	public abstract int numAristas();
